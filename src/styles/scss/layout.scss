@@ -1,0 +1,23 @@
+.content {
+  width: 1000px;
+  min-height: 100%;
+  padding: 70px 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
+  .logo {
+    width: 130px;
+    background-image: url('@/assets/logo.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  .project-name {
+    font-size: 21px;
+    font-weight: 700;
+  }
+}

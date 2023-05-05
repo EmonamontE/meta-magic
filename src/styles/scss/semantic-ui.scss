@@ -1,0 +1,25 @@
+@import '@/styles/scss/colors';
+
+.ui.pointing.secondary.menu {
+  display: flex;
+  height: 30px;
+  margin-bottom: 45px;
+
+  .item {
+    height: 100%;
+    cursor: pointer;
+    padding: 0 10px;
+    color: $c-text-inactive;
+    border-bottom: 2px solid $c-text-inactive;
+    transition: color 0.3s ease;
+  }
+
+  .active {
+    color: $c-text-main;
+    border-bottom: 2px solid $c-text-main;
+  }
+}
+
+.ui.segment.active.tab {
+  color: $c-text-main
+}

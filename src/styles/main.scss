@@ -1,5 +1,7 @@
 @import '@/styles/fonts/fonts';
 @import '@/styles/scss/colors';
+@import '@/styles/scss/layout';
+@import '@/styles/scss/semantic-ui';
 
 * {
   margin: 0;
@@ -8,6 +10,11 @@
   font-family: Circe;
   font-weight: 400;
   color: $c-text-main;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
 }
 
 :root {

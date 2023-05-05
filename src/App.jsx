@@ -1,24 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import { Tab } from 'semantic-ui-react'
+
+const panes = [
+  {
+    menuItem: 'App Store',
+    render: () => <Tab.Pane attached={false}>App Store Meta Content</Tab.Pane>,
+  },
+  {
+    menuItem: 'Google Play',
+    render: () => <Tab.Pane attached={false}>Google Play Meta Content</Tab.Pane>,
+  },
+]
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    <div className="content">
+      <div className="content__header">
+        <div className="logo"></div>
+        <div className="project-name">META MAGIC</div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+    </div>
   )
 }
 
