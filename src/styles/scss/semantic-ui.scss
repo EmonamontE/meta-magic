@@ -2,26 +2,42 @@
 
 .ui.pointing.secondary.menu {
   display: flex;
-  height: 30px;
+  width: auto;
   margin-bottom: 45px;
 
   .item {
+    &:not(:last-child) .tab-title:after {
+      content: '';
+    }
+
     height: 100%;
     cursor: pointer;
-    padding: 0 10px;
     font-size: 16px;
     color: $c-text-inactive;
-    border-bottom: 2px solid $c-text-inactive;
     transition: color 0.3s ease;
   }
 
   .active {
-    color: $c-text-main;
-    border-bottom: 2px solid $c-text-main;
-    font-weight: 500;
+    & .tab-title__label {
+      font-weight: 500;
+      color: $c-text-main;
+      border-bottom: 1px solid $c-text-main;
+    }
   }
 }
 
-.ui.segment.active.tab {
-  color: $c-text-main
+.tab-title {
+  display: flex;
+
+  &__label {
+    line-height: 20px;
+    border-bottom: 1px solid $c-text-inactive;
+    padding-bottom: 14px;
+  }
+
+  &:after {
+    display: inline-block;
+    width: 20px;
+    border-bottom: 1px solid $c-text-inactive;
+  }
 }

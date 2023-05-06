@@ -1,15 +1,5 @@
-import { Tab } from 'semantic-ui-react'
-
-const panes = [
-  {
-    menuItem: 'App Store',
-    render: () => <Tab.Pane attached={false}>App Store Meta Content</Tab.Pane>,
-  },
-  {
-    menuItem: 'Google Play',
-    render: () => <Tab.Pane attached={false}>Google Play Meta Content</Tab.Pane>,
-  },
-]
+import { Tab, Menu } from 'semantic-ui-react'
+import TabTitle from '@/components/TabTitle.jsx';
 
 function App() {
   return (
@@ -23,5 +13,24 @@ function App() {
     </div>
   )
 }
+
+const panes = [
+  {
+    menuItem: (
+      <Menu.Item>
+        <TabTitle title='App Store' />
+      </Menu.Item>
+    ),
+    render: () => <Tab.Pane attached={false}>App Store Meta Content</Tab.Pane>,
+  },
+  {
+    menuItem: (
+      <Menu.Item>
+        <TabTitle title='Google Play' />
+      </Menu.Item>
+    ),
+    render: () => <Tab.Pane attached={false}>Google Play Meta Content</Tab.Pane>,
+  },
+]
 
 export default App
