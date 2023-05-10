@@ -5,8 +5,10 @@ function App() {
   return (
     <div className="content">
       <div className="content__header">
-        <div className="logo"></div>
-        <div className="project-name">META MAGIC</div>
+        <div className="logo" />
+        <div className="project-name">
+          META MAGIC
+        </div>
       </div>
 
       <Tab menu={{ secondary: true, pointing: true }} panes={panes} />

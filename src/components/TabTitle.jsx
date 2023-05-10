@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 function TabTitle ({ title }) {
   return (
     <div className="tab-title">
-      <div className="tab-title__label">{title}</div>
+      <div className="tab-title__label">
+        {title}
+      </div>
     </div>
   )
 }

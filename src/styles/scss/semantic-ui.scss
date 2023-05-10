@@ -14,7 +14,6 @@
     cursor: pointer;
     font-size: 16px;
     color: $c-text-inactive;
-    transition: color 0.3s ease;
   }
 
   .active {
@@ -22,6 +21,7 @@
       font-weight: 500;
       color: $c-text-main;
       border-bottom: 1px solid $c-text-main;
+      transition: color 0.3s ease;
     }
   }
 }
